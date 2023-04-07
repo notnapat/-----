@@ -1,0 +1,32 @@
+https://dev.classmethod.jp/articles/react-functional-component-vs-class-component/
+
+############ class component 
+  class MyComponent extends Component {}
+  class MyComponent extends React.Component { 
+  	render() { 
+          return
+	} 
+  }
+  
+  - รูปแบบการเขียนเป็นแบบ class ที่จะต้องสืบทอดจาก React lib อีกทีแล้ว render มาเป็น React element
+  - ต้องเขียน code หลายบรรทัดมากกว่าเนื่องจากต้องเขียน logic เป็น state
+  - ต้องมี render method ทุกครั้งเพื่อ return component
+  - รูปแแบบการเขียนเป็น State มีความซับซ้อน มากกว่า
+  - สามารถใช้ componentDidMount ได้ใน class component มากกว่า
+
+
+############ functional component
+  function Mycomponent () {
+  	return
+  }
+  
+  - รูปแบบการเขียนเป็น javascript function ทั่วไป function จะรับ props เป็น argument แล้ว return เป็น React element	
+  - เขียน code ได้สั้นลงเพราะมี lib มาช่วย	
+  - ไม่ต้อง render ใน Functional component สามารถ return component ได้เลย	
+  - รูปแแบบการเขียนเป็น Stateless ทำให้ไม่ซับซ้อน	
+  - มี lifecycle methods บางตัวที่ไม่สามารถใช้ได้เช่น componentDidMount (ใช้ useEffect แทน)	
+  
+  
+###### 
+  class component เป็นรูปแบบเก่า ไม่รองรับ hook และปัจจุบันน่าจะเปลี่ยนมาใช้ functional กันหมด
+  หน้าที่การใช้งานเหมือนกัน แต่ functional ใช้ง่าย และหลากหลายกว่า

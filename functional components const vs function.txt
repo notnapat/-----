@@ -1,0 +1,59 @@
+https://dev.to/ugglr/react-functional-components-const-vs-function-2kj9
+
+########
+
+const MyComponent = () => {
+    return(
+      ..
+    )
+}
+
+const MyComponent = () => (...)
+
+  VS
+
+function MyComponent() {
+    return(
+      ..
+    )
+}
+
+########
+const MyComponent = () => {}
+
+export default MyComponent
+
+  VS
+  
+export default function MyComponent() {}
+  
+#########
+const ใช้ได้แค่จากล่างบนไปล่าง 
+
+const MyComponent = () => {}
+
+const AlsoMyComponent = () => {}
+
+const App = () => (
+    <>
+      <MyComponent />
+      <AlsoMyComponent />
+    </>
+)
+  
+  VS
+  
+function สามารถใช้ ล่าง ไปบน หรือ บนไปล่างก็ได้
+  
+ const App = () => (
+    <>
+      <MyComponent />
+      <AlsoMyComponent />
+    </>
+)
+
+function MyComponent() {}
+
+function AlsoMyComponent() {}
+
+

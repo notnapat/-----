@@ -1,0 +1,10 @@
+แทนที่useHistoryด้วยuseNavigate จากนั้น
+
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
+แล้วแทนที่history.push('/path')ด้วยnavigate('/path')
+
+เปลี่ยนhistory.replace('/path')ด้วยnavigate('/path', { replace: true })
+
+ต้องการใช้stateในpush/navigate donavigate('/path', { state: { name:'Xyz' }})

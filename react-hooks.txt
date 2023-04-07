@@ -1,0 +1,5 @@
+แก้แจ้งเตือนค่าว่าง   [ ]   ของ useEffect 
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  
+  - นำไปวางไว้บนด้านบนบรรทัด [ ] 
