@@ -8,3 +8,9 @@ const navigate = useNavigate();
 เปลี่ยนhistory.replace('/path')ด้วยnavigate('/path', { replace: true })
 
 ต้องการใช้stateในpush/navigate donavigate('/path', { state: { name:'Xyz' }})
+
+	  ########## น่าจะ นะ
+  BrowserRouter == ใช้กับระบบใหญ่ ครอบ app
+  Router == ใช้ครอบ Routes ในระบบเล็กๆ ถ้าระบบใหญ่ หรือใช้ package อื่นๆเพิ่ม น่าจะต้องใช้ BrowserRouter แทน
+  Routes == ใช้ครอบ Route 
+  Route path="/"  == ใช้กำ หนดหน้าpath แสดงตามลิงค์ที่คลิ๊ก

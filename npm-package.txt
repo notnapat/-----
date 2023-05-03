@@ -1,0 +1,73 @@
+npmjs.com == เว็บรวม package npm
+npm -v == เช้คเวอร์ชั่น npm
+npm root -g == เช็คที่อยู่ node_modules หรือแพกเกจ ที่ install -g , --golbal
+
+npm == management = จัดการ > ,ติดตั้ง อัพเดท ลบ ## ต้องติดตั้งลงในเครื่อง
+npx == execute = ประมวลผล, ดำเนินการ ## ไม่่ต้องติดตั้งลงในเครื่่อง โหลดมา แล้วรันเลย ติดตั้งใช้งานแพกเกจแบบชั่วคราว
+
+	### ใช้งาน
+	
+  ## ติดตั้งใช้งาน npm && yarn บนโปรเจค
+npm init && yarn init
+npm init -y 
+
+  ## ติดตั้งแพกเกจจากเครื่อง หรือ global ลงใน โปรเจค  package.json
+npm i, npm install
+yarn , yarn install
+
+  # เช็คแพ็กเกจที่ติดตั้งไว้ในเครื่อง 
+npm ls -g, npm list -g -depth 0 >> -depth 0 คือที่เราติดตั้งเอง
+yarn list -global -depth 0
+
+  # เช็คแพ็กเกตที่ติดตั้งใน โปรเจค
+npm ls, npm list >> แพ็กเกจทั้งหมดใน project
+npm ls -depth 0 >> แพ็กเกจทั้งหมด ที่ติดตั้งลงใหม่ลงใน project
+
+  ## ติดตั้ง หริอ ใช้งานไฟจากภายนอก แบบแค่ใช้แค่ในโปรเจคนี้เท่านั้น
+npm i package, npm install package
+yarn add package
+
+  # -global, -g
+  == ติดตั้ง package ลงในเครื่อง ไฟล์อยู่ใน โฟลเดอร์ node_madules 
+  == และสามารถใช้ได้เลย ไม่ต้องติดตั้งเพิ่มลงในproject ไม่ติดตั้ง หรือ แสดงบน ไฟล์ packgae.json ในโปรเจค
+npm i package -global, npm i -g package
+yarn add package -global, -g
+  
+  # --production
+  == น่าจะ ใช้ หรือ ไม่ใช้ก็ได้ มั้ง เพราะน่าจะเหมือนกับ การติดตั้งธรรมดา แค่จะแยกความต่างให้ชัดเจน
+  == ใช้ติดตั้ง package เฉพาะใช้งาน บน server หรือ ใช้งานจริง จะตัด package ใน dev , peer ออก เวลา deploy
+npm i package --production
+
+  # --save, -s
+  == 	ติดตั้งลงในเครื่อง และใน package.json > dependiencies
+npm i package --save
+
+  # --dev , -d
+  == ใช้ในกรณีที่ ไม่มีผลต่อการทำงานของโปรเจค projact หรือ โมดูล หรือ ไลบารี่ตัวอื่น
+     - มีผลแต่กับ dev โดยตรง เช่น package ใช้ test
+  == package ที่ใข้ ในโหมดนักพัฒนาเท่านั้น เมื่อ deploy to public จะไม่สามารถใช้แพกเกจนี้ได้ หรือ จะไม่มองเห็น เหมือนไม่มีอยู่
+npm i package --dev , -d
+
+  # --save-dev
+  == การใช้งานผสมระหว่าง --save, --dev
+npm i package --save-dev
+
+  # --peer
+  == น่าจะเป็น package ที่จำเป็นกับ project นั้น หรือ มีไลบารี่ ในproject นั้น ต้องใช้  และให้ติดไปด้วย คนที่นำ project ไปพัฒนาต่อ สามารถนำไปใช้ต่อได้เลย มั้งนะ
+npm i package --peer
+
+  # --optional
+  == ไม่ค่อยจำเป็น หรือ มีผลอะไร แต่สามารใช้เพื่อระบุ หรือ แยก package ที่มีคุณสมบัติพิ หรือ การใช้งานที่พิเศษ
+npm i package --optional
+
+
+  
+  # @version && update
+npm i package@1,2,4 > ต้องการเวอชั่นไหนก็ในเลขนั้นไป
+> ถ้าจะเปลี่ยน version ติดตั้งทับได้เลย, ถ้าต้องการ version ล่าสุด ก็ไม่ต้องใส่ @ หลังpackage
+npm install -g npm == update npm to final version
+
+  # uninstall && remove
+  == ถอนการติดตั้ง package
+npm uninstall packgae, yarn remove package
+
