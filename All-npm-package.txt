@@ -1,0 +1,11 @@
+
+		#### UI
+Animate.css == สร้างอนิเมชั่น
+react-animated-css 
+devicons-react == Programming Icon 
+react-scroll == คลิ๊กลิงค์แล้วสกลอลงล่าง ขึ้นบน
+"react-awesome-reveal": "^4.1.0", == เวอชั่นนี้ไม่รวน
+
+ ## Hrad libairy
+ react-spring
+ Framer motion
