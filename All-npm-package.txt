@@ -6,6 +6,12 @@ devicons-react == Programming Icon
 react-scroll == คลิ๊กลิงค์แล้วสกลอลงล่าง ขึ้นบน
 "react-awesome-reveal": "^4.1.0", == เวอชั่นนี้ไม่รวน
 
+ ## Slider
+react-slick
+slick-carousel
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
  ## Hrad libairy
  react-spring
  Framer motion
